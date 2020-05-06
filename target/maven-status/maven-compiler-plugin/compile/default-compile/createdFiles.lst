@@ -1,8 +1,0 @@
-be\belfius\Daouri_Samy_Games\domain\Game.class
-be\belfius\Daouri_Samy_Games\repository\GameRepository.class
-be\belfius\Daouri_Samy_Games\App.class
-be\belfius\Daouri_Samy_Games\domain\Borrower.class
-be\belfius\Daouri_Samy_Games\domain\Difficulty.class
-be\belfius\Daouri_Samy_Games\domain\Category.class
-TestConnection.class
-be\belfius\Daouri_Samy_Games\domain\Borrow.class

@@ -7,6 +7,7 @@
   <groupId>be.belfius</groupId>
   <artifactId>Daouri_Samy_Games</artifactId>
   <version>0.0.1-SNAPSHOT</version>
+  <packaging>pom</packaging>
 
   <name>Daouri_Samy_Games</name>
   <!-- FIXME change it to the project's website -->
