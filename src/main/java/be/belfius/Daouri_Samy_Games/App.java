@@ -21,7 +21,6 @@ import be.belfius.Daouri_Samy_Games.domain.Category;
 import be.belfius.Daouri_Samy_Games.domain.Difficulty;
 import be.belfius.Daouri_Samy_Games.domain.DifficultyLevel;
 import be.belfius.Daouri_Samy_Games.domain.Game;
-import be.belfius.Daouri_Samy_Games.repository.GameRepository;
 import be.belfius.Daouri_Samy_Games.service.GameService;
 
 /**
