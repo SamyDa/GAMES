@@ -1,45 +1,55 @@
 package be.belfius.Daouri_Samy_Games.domain;
 
-public class Borrower {
+import java.sql.ResultSet;
+import java.sql.SQLException;
+
+public class Borrower extends DataStructure{
 	
-	private int id ;
-	private String name;
 	private String street;
-	private int houseNumber;
-	private int busNumber;
+	private String houseNumber;
+	private String busNumber;
 	private int postCode;
 	private String city;
 	private String telephone;
 	private String email;
 	
-	public int getId() {
-		return id;
+	
+	public Borrower() {
+		this.tableName = "Borrower";
+		this.nameColumn= "borrower_name";
 	}
-	public void setId(int id) {
+	
+	public Borrower(int id, String name, String street, String houseNumber, String busNumber, int postCode, String city,
+			String telephone, String email) {
+		this.nameColumn= "borrower_name";
+		this.tableName = "Borrower";
 		this.id = id;
-	}
-	public String getName() {
-		return name;
-	}
-	public void setName(String name) {
 		this.name = name;
+		this.street = street;
+		this.houseNumber = houseNumber;
+		this.busNumber = busNumber;
+		this.postCode = postCode;
+		this.city = city;
+		this.telephone = telephone;
+		this.email = email;
 	}
+	
 	public String getStreet() {
 		return street;
 	}
 	public void setStreet(String street) {
 		this.street = street;
 	}
-	public int getHouseNumber() {
+	public String getHouseNumber() {
 		return houseNumber;
 	}
-	public void setHouseNumber(int houseNumber) {
+	public void setHouseNumber(String houseNumber) {
 		this.houseNumber = houseNumber;
 	}
-	public int getBusNumber() {
+	public String getBusNumber() {
 		return busNumber;
 	}
-	public void setBusNumber(int busNumber) {
+	public void setBusNumber(String busNumber) {
 		this.busNumber = busNumber;
 	}
 	public int getPostCode() {
@@ -66,25 +76,33 @@ public class Borrower {
 	public void setEmail(String email) {
 		this.email = email;
 	}
-	public Borrower() {
-		
+	
+	
+	@Override
+	public boolean setStructure(ResultSet set) {
+		try {
+			if(set.next()) {
+				
+				this.id = set.getInt("id");
+				this.name = set.getString("borrower_name");
+				this.street = set.getString("street");;
+				this.houseNumber = set.getString("house_number");;
+				this.busNumber = set.getString("bus_number");;
+				this.postCode = set.getInt("postCode");
+				this.city = set.getString("city");;
+				this.telephone = set.getString("telephone");;
+				this.email = set.getString("email");;
+				return true;
+			}	
+
+		} catch (SQLException e) {
+			return false;
+		} catch(NullPointerException e) {
+			return false;
+		}
+		return false;
+	
+	
 	}
-	
-	public Borrower(int id, String name, String street, int houseNumber, int busNumber, int postCode, String city,
-			String telephone, String email) {
-		this.id = id;
-		this.name = name;
-		this.street = street;
-		this.houseNumber = houseNumber;
-		this.busNumber = busNumber;
-		this.postCode = postCode;
-		this.city = city;
-		this.telephone = telephone;
-		this.email = email;
-	}
-	
-	
-	
-	
 	
 }

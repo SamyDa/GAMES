@@ -1,34 +1,36 @@
 package be.belfius.Daouri_Samy_Games.domain;
 
-public class Difficulty {
-	private int id; 
-	private String name;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+
+public class Difficulty extends DataStructure{
 	
-	public Difficulty() {
-		
+	public Difficulty(){
+		super();
+		this.tableName = "Difficulty";
+		this.nameColumn= "difficulty_name";
 	}
 	
-	public Difficulty(int id, String name) {
-		this.id = id;
-		this.name = name;
+	public Difficulty(int id , String name){
+		super(id, name);
+		this.tableName = "Difficulty";
+		this.nameColumn= "difficulty_name";
 	}
 
-	public int getId() {
-		return id;
-	}
+	@Override
+	public boolean setStructure(ResultSet set) {
+		try {
+			if(set.next()) {
+				this.id = set.getInt("id");
+				this.name = set.getString("difficulty_name");
+				return true;
+			}	
 
-	public void setId(int id) {
-		this.id = id;
+		} catch (SQLException e) {
+			return false;
+		} catch(NullPointerException e) {
+			return false;
+		}
+		return false;
 	}
-
-	public String getName() {
-		return name;
-	}
-
-	public void setName(String name) {
-		this.name = name;
-	}
-	
-	
-	
 }

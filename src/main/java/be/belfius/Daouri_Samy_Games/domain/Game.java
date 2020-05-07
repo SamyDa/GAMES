@@ -1,27 +1,33 @@
 package be.belfius.Daouri_Samy_Games.domain;
 
-public class Game {
+import java.sql.ResultSet;
+import java.sql.SQLException;
 
-	private int id ; 
-	private String name; 
+public class Game extends DataStructure{
+
 	private String editor ; 
 	private String author; 
 	private int editionYear ; 
-	private int age ; 
+	private String age; 
 	private int minPlayers ; 
 	private int maxPlayers ; 
 	private int categoryId ; 
-	private int playDuration ; 
+	private String playDuration ; 
 	private int difficultyId ; 
 	private double price; 
 	private String image;
+	private Category category;
+	private Difficulty difficulty;
 	
 	public Game() {
-		
+		this.tableName = "Game";
+		this.nameColumn= "game_name";
 	}
 	
-	public Game(int id, String name, String editor, String author, int editionYear, int age, int minPlayers,
-			int maxPlayers, int categoryId, int playDuration, int difficultyId, double price, String image) {
+	public Game(int id, String name, String editor, String author, int editionYear, String age, int minPlayers,
+			int maxPlayers, int categoryId, String playDuration, int difficultyId, double price, String image) {
+		this.tableName = "Game";
+		this.nameColumn= "game_name";
 		this.id = id;
 		this.name = name;
 		this.editor = editor;
@@ -37,21 +43,6 @@ public class Game {
 		this.image = image;
 	}
 
-	public int getId() {
-		return id;
-	}
-
-	public void setId(int id) {
-		this.id = id;
-	}
-
-	public String getName() {
-		return name;
-	}
-
-	public void setName(String name) {
-		this.name = name;
-	}
 
 	public String getEditor() {
 		return editor;
@@ -77,11 +68,11 @@ public class Game {
 		this.editionYear = editionYear;
 	}
 
-	public int getAge() {
+	public String getAge() {
 		return age;
 	}
 
-	public void setAge(int age) {
+	public void setAge(String age) {
 		this.age = age;
 	}
 
@@ -109,11 +100,11 @@ public class Game {
 		this.categoryId = categoryId;
 	}
 
-	public int getPlayDuration() {
+	public String getPlayDuration() {
 		return playDuration;
 	}
 
-	public void setPlayDuration(int playDuration) {
+	public void setPlayDuration(String playDuration) {
 		this.playDuration = playDuration;
 	}
 
@@ -140,6 +131,63 @@ public class Game {
 	public void setImage(String image) {
 		this.image = image;
 	}
+	
+	public Category getCategory() {
+		return category;
+	}
+
+	public void setCategory(Category category) {
+		this.category = category;
+	}
+
+	public Difficulty getDifficulty() {
+		return difficulty;
+	}
+
+	public void setDifficulty(Difficulty difficulty) {
+		this.difficulty = difficulty;
+	}
+
+	@Override
+	public boolean setStructure(ResultSet set) {
+		try {
+			if(set.next()) {
+				this.id = set.getInt("id");
+				this.name = set.getString("game_name");
+				this.editor = set.getString("editor");
+				this.author =   set.getString("author");
+				this.editionYear = set.getInt("year_edition");
+				this.age = set.getString("age");
+				this.minPlayers = set.getInt("min_players");
+				this.maxPlayers = set.getInt("max_players");
+				this.categoryId = set.getInt("category_id");
+				this.playDuration = set.getString("play_duration");
+				this.difficultyId = set.getInt("difficulty_id");
+				this.price = set.getDouble("price");
+				this.image = set.getString("image");
+				return true;
+			}	
+
+		} catch (SQLException e) {
+			return false;
+		} catch(NullPointerException e) {
+			return false;
+		}
+		return false;
+	}
+
+	@Override
+	public String toString() {
+		return    "\tName : " + this.name + " \n "+ "\tEditor : " + editor + " \n "+ "\tAuthor : " +author + " \n "+  "\tEdition year : " +editionYear+ " \n "
+	            + "\tAge : " +age + " \n "+  "\tMin Players : " +minPlayers + " \n "+  "\tMax Players : " +maxPlayers + " \n "+   "\tDuration : " + playDuration + " \n "
+				+ "\tPrice : " +price + " \n "+  "\tImage : " +image ; 
+	}
+	
+	public String toString(String category , String difficulty) {
+		return  "\tName : " + this.name + " \n "+ "\tEditor : " + editor + " \n "+ "\tAuthor : " +author + " \n "+  "\tEdition year : " +editionYear+ " \n "+  "\tAge : " +age + " \n "+  "\tMin Players : " +minPlayers + " \n "+  "\tMax Players : " +maxPlayers + " \n "+  "\tCategory : " + category + " \n "+   "\tDuration : " +playDuration + " \n "+  "\tDifficulty : " +difficulty + " \n "+  "\tPrice : " +price + " \n "+  "\tImage : " +image ; 
+	}
+	
+	
 	
 	
 	
