@@ -10,6 +10,8 @@ public class Borrow extends DataStructure {
 	private int borrowerId;
 	private Date borrowDate;
 	private Date returnDate;
+	private Game game;
+	private Borrower borrower;
 	
 	public Borrow() {
 		super();
@@ -43,13 +45,28 @@ public class Borrow extends DataStructure {
 		this.borrowDate = borrowDate;
 	}
 	public Date getReturnDate() {
-		return returnDate;
+		if (returnDate!= null)
+			return returnDate;
+		else
+			return new Date(0L); 
 	}
 	public void setReturnDate(Date returnDate) {
 		this.returnDate = returnDate;
 	}
 
 	
+	public Game getGame() {
+		return game;
+	}
+	public void setGame(Game game) {
+		this.game = game;
+	}
+	public Borrower getBorrower() {
+		return borrower;
+	}
+	public void setBorrower(Borrower borrower) {
+		this.borrower = borrower;
+	}
 	@Override
 	public boolean setStructure(ResultSet set) {
 		try {

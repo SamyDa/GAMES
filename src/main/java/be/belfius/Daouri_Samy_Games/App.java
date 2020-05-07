@@ -2,8 +2,12 @@ package be.belfius.Daouri_Samy_Games;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
+import java.util.Comparator;
+import java.util.Date;
 import java.util.InputMismatchException;
 import java.util.List;
 import java.util.Optional;
@@ -15,6 +19,7 @@ import be.belfius.Daouri_Samy_Games.domain.Borrow;
 import be.belfius.Daouri_Samy_Games.domain.Borrower;
 import be.belfius.Daouri_Samy_Games.domain.Category;
 import be.belfius.Daouri_Samy_Games.domain.Difficulty;
+import be.belfius.Daouri_Samy_Games.domain.DifficultyLevel;
 import be.belfius.Daouri_Samy_Games.domain.Game;
 import be.belfius.Daouri_Samy_Games.repository.GameRepository;
 import be.belfius.Daouri_Samy_Games.service.GameService;
@@ -151,7 +156,33 @@ public class App
 	}
 
 	private static void searchAdvanced() {
-		// TODO Auto-generated method stub
+		int choice = 0;
+		System.out.println("List of difficulties : ");
+		System.out.println("-----------------------");
+		for(DifficultyLevel lvl : DifficultyLevel.values()) {
+			System.out.println(lvl.getDifficultyOrder() + ". "+lvl.getDifficultyLevel());
+		}
+		while(choice < 1 || choice > 5) {
+			System.out.println("Please select a difficulty in the following list (1 to 5) : ");
+			try {
+		            choice = scanner.nextInt();
+	        }catch(InputMismatchException e) {
+	         	choice = 0;
+	         	System.out.println("Only integers between 1 and 5 are allowed, please try again");
+	         	scanner.next();
+	        }
+		}
+		
+		DifficultyLevel chosenLvl = null;
+		for(DifficultyLevel lvl :  DifficultyLevel.values()) {
+			if(choice == lvl.getDifficultyOrder())
+				  chosenLvl  = lvl;
+		}
+		
+		DifficultyLevel lvl =chosenLvl;
+		System.out.println("The list of games corresponding to the difficulty " + chosenLvl.getDifficultyLevel() + " : ");
+		List<Game> gameList = gameService.fillList(new Game());
+		gameList.stream().filter(n -> n.getDifficultyId()== lvl.getDifficultyOrder()).forEach(n -> System.out.println("\t" + n.getName()) );
 		
 	}
 
@@ -164,11 +195,43 @@ public class App
 		//-Add the possibiliy to search the name of the borrower. Do this by giving him the opportunity to enter the name of
 		// the borrower (provide a list of all possible borrowers)
 		//- He must have the choice between choosing a name or exiting.
-		
+		DateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
 		List<Borrow> borrowList = new ArrayList<Borrow>();
+		borrowList = gameService.fillList(new Borrow());
+		//find and fill Game and Borrower for each borrow
 		
-		
-		
+		System.out.println(String.format("%-10s","Borrow") + "\t"  + String.format("%-10s", "Return") + "\t"  + String.format("%-35s", "Game Name")  + "\t"  + "Borrower Name" );
+		System.out.println(String.format("%-10s","-------") + "\t"  + String.format("%-10s", "-------") + "\t"  + String.format("%-35s", "----------")  + "\t"  + "--------------" );
+		System.out.println("(Note : if the return date has not been specified, it is displayed as"+dateFormat.format(new Date(0L))+")");
+		System.out.println();
+		borrowList.forEach((n) -> {
+			Game game = new Game();
+			Borrower borrower = new Borrower() ;
+			n.setGame(game); 
+			n.setBorrower(borrower); 
+			try {
+				gameService.getDataByPosition(game, n.getGameId());
+				gameService.getDataByPosition(borrower, n.getBorrowerId());
+			} catch (Exception e) {
+				e.printStackTrace();
+			}});
+		Comparator<Borrow> compareByName = Comparator.comparing(Borrow::getBorrower, (s1,s2)-> {return s2.getName().compareTo(s1.getName());}).thenComparing(Borrow::getBorrowDate, (d1,d2) -> {return d2.compareTo(d1);});
+		borrowList.stream().sorted((b1,b2) -> b1.getBorrower().getName().compareTo(b2.getBorrower().getName())).forEach(n -> {
+			System.out.println(String.format("%1$10s",dateFormat.format(n.getBorrowDate())) +"\t"+ String.format("%1$10s",dateFormat.format(n.getReturnDate())) + "\t" +String.format("%1$-35s",n.getGame().getName()) + "\t"+n.getBorrower().getName());
+			});
+		while(true) {
+			System.out.println("If you want to filter on a specific borrower, please enter a name (\"*\" to quit): ");
+			String filterName = scanner.next();
+			if(!filterName.equals("*")) {
+				System.out.println(String.format("%-10s","Borrow") + "\t"  + String.format("%-10s", "Return") + "\t"  + String.format("%-35s", "Game Name")  + "\t"  + "Borrower Name" );
+				System.out.println(String.format("%-10s","-------") + "\t"  + String.format("%-10s", "-------") + "\t"  + String.format("%-35s", "----------")  + "\t"  + "--------------" );
+				System.out.println("(Note : if the return date has not been specified, it is displayed as"+dateFormat.format(new Date(0L))+")");
+				borrowList.stream().filter((n) -> n.getBorrower().getName().toUpperCase().contains(filterName.toUpperCase())).forEach(n -> {
+					System.out.println(String.format("%1$10s",dateFormat.format(n.getBorrowDate())) +"\t"+ String.format("%1$10s",dateFormat.format(n.getReturnDate())) + "\t" +String.format("%1$-35s",n.getGame().getName()) + "\t"+n.getBorrower().getName());});
+			}
+			else 
+				return;
+		}
 	}
 
 	private static void showAndPickGame() {
@@ -176,8 +239,8 @@ public class App
 		//When the user enters part of a name of a game, he gets all the details (from table game, category and difficulty) of
 		//the selected game.
 		
-		List<Game> gameList = new ArrayList<Game>();
-		gameList = gameService.fillList(new Game());
+//		List<Game> gameList = new ArrayList<Game>();
+		List<Game> gameList = gameService.fillList(new Game());
 		gameList.forEach((n) ->{Category category = new Category(); n.setCategory(category); try {
 			gameService.getDataByPosition(category, n.getCategoryId());
 			System.out.println("\t" + n.getName() + " - " + category.getName() );
@@ -198,7 +261,6 @@ public class App
 				gameService.getDataByPosition(difficulty, filterGame.get().getDifficultyId());
 				System.out.println(filterGame.get().toString(filterGame.get().getCategory().getName(), filterGame.get().getDifficulty().getName()));
 			} catch (Exception e) {
-				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
 		}else {

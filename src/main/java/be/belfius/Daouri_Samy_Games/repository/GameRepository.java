@@ -9,21 +9,12 @@ import java.sql.Statement;
 
 import be.belfius.Daouri_Samy_Games.domain.DataStructure;
 
-
-
-
 public class GameRepository  {
 	private Connection con;
 	private Statement state;
 	private ResultSet result;
 		
 	public boolean openConnection() {
-		/*try {
-			Class.forName("com.mysql.jdbc.Driver");
-		} catch (ClassNotFoundException e) {
-			e.printStackTrace();
-			return false;
-		} */
 		try {
 			con = DriverManager.getConnection("jdbc:mysql://localhost:3306/games?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC","root","Sa1_Sony_4");
 			state = con.createStatement();
@@ -33,23 +24,19 @@ public class GameRepository  {
 			e.printStackTrace();
 			return false;
 		}
-		
 	}	
 	
 	public boolean closeConnection() {
-		
 		try {
 			if(!con.isClosed()) {
 				con.close();
 				return true;
 			}
 		} catch (SQLException e) {
-			
 			e.printStackTrace();
 			return false;
 		}
 		return false;
-		
 	}	
 	
 	public ResultSet getList(String tableName) {
