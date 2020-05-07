@@ -75,8 +75,10 @@ public class GameService extends Throwable{
 		
 		try {
 			Class cl = Class.forName(element.getClass().getName());
-			((DataStructure) element).setId(-1);
-			((DataStructure) element).setName(null);
+			if(((DataStructure) element).getId() == 0)
+				((DataStructure) element).setId(-1);
+			if(((DataStructure) element).getName().isEmpty() || ((DataStructure) element).getName().isBlank())
+				((DataStructure) element).setName(null);
 			if(gameRepository.openConnection()) {
 				ResultSet result = gameRepository.getList((DataStructure)element);
 				

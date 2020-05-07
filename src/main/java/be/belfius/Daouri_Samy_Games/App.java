@@ -114,7 +114,21 @@ public class App
     }
 
 	private static void searchComplex() {
+		//- The user can search on a (part of a) name of a borrower, this is not always at the beginning of the name.
+		//- He will receive an alphabetical list of borrowers, that have the search in their name.
+		//- Show 4 columns: name, city, telephone, e-mail
+		System.out.println("Please, enter a part of the name of the borrower you want to display : ");
+		String chosenName = scanner.next();
 		
+		Borrower borrower = new Borrower();
+		borrower.setId(-1);
+		borrower.setName(chosenName);
+		
+		List<Borrower> borrowerList = gameService.fillList(borrower);
+		System.out.println(String.format("%-35s","Name  ") + "\t"  + String.format("%-20s", "City  ") + "\t"  + String.format("%-20s", "Phone ")  + "\t"  + "Email" );
+		System.out.println(String.format("%-35s","-------") + "\t"  + String.format("%-20s", "-----") + "\t"  + String.format("%-20s", "------")  + "\t"  + "------" );
+		System.out.println();
+		borrowerList.stream().sorted((b1,b2) -> b1.getName().compareTo(b2.getName())).forEach(n -> System.out.println(String.format("%1$-35s",n.getName()) +"\t"+ String.format("%1$-20s",n.getCity()) + "\t" +String.format("%1$-20s", n.getTelephone()) + "\t"+n.getEmail()));
 		
 	}
 
