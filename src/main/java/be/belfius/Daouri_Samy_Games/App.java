@@ -1,6 +1,6 @@
 package be.belfius.Daouri_Samy_Games;
 
-import java.sql.ResultSet;
+
 import java.sql.SQLException;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
@@ -12,8 +12,6 @@ import java.util.InputMismatchException;
 import java.util.List;
 import java.util.Optional;
 import java.util.Scanner;
-import java.util.function.Consumer;
-import java.util.stream.Stream;
 
 import be.belfius.Daouri_Samy_Games.domain.Borrow;
 import be.belfius.Daouri_Samy_Games.domain.Borrower;
@@ -37,6 +35,7 @@ public class App
         int choice = 0;
         System.out.println("GameApp from Samy Daouri  -  Version 0.1   - " +  currentDate);
         System.out.println();
+        getConnectionConf();
         displayMenu();
         do{         
             System.out.println("\nWhich option do you want to execute (99 to display the menu again)?");      
@@ -54,7 +53,18 @@ public class App
                     
     }
 
-    private static void displayMenu() {
+    private static void getConnectionConf() {
+    	
+    	System.out.println("Enter your DB user  : ");
+    	String user = scanner.next();
+    	
+    	System.out.println("Enter your DB password");
+		String password = scanner.next();
+		
+		gameService.setDBConf(user, password);
+	}
+
+	private static void displayMenu() {
         System.out.println("-------------------------------------------------------------");
         System.out.println("----                     Menu                            ----");
         System.out.println("-------------------------------------------------------------");
@@ -229,7 +239,7 @@ public class App
 				e.printStackTrace();
 			}});
 		Comparator<Borrow> compareByName = Comparator.comparing(Borrow::getBorrower, (s1,s2)-> {return s2.getName().compareTo(s1.getName());}).thenComparing(Borrow::getBorrowDate, (d1,d2) -> {return d2.compareTo(d1);});
-		borrowList.stream().sorted((b1,b2) -> b1.getBorrower().getName().compareTo(b2.getBorrower().getName())).forEach(n -> {
+		borrowList.stream().sorted(compareByName).forEach(n -> {
 			System.out.println(String.format("%1$10s",dateFormat.format(n.getBorrowDate())) +"\t"+ String.format("%1$10s",dateFormat.format(n.getReturnDate())) + "\t" +String.format("%1$-35s",n.getGame().getName()) + "\t"+n.getBorrower().getName());
 			});
 		while(true) {

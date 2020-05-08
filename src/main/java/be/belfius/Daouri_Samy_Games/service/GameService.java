@@ -12,7 +12,7 @@ import be.belfius.Daouri_Samy_Games.repository.GameRepository;
 public class GameService extends Throwable{
 	
 	private GameRepository gameRepository = new GameRepository();
-
+	
 	
 	public <T> boolean getDataByPosition(T structure , int position) throws Exception{
 		DataStructure element = (DataStructure) structure;
@@ -105,6 +105,11 @@ public class GameService extends Throwable{
 		}
 		
 		return list;
+	}
+
+	public void setDBConf(String user, String password) {
+		gameRepository.setDBConf(user, password);
+		
 	}
 	
 }

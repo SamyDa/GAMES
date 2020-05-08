@@ -3,7 +3,6 @@ package be.belfius.Daouri_Samy_Games.repository;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
-import java.sql.ResultSetMetaData;
 import java.sql.SQLException;
 import java.sql.Statement;
 
@@ -13,10 +12,12 @@ public class GameRepository  {
 	private Connection con;
 	private Statement state;
 	private ResultSet result;
+	private String user;
+	private String password;
 		
 	public boolean openConnection() {
 		try {
-			con = DriverManager.getConnection("jdbc:mysql://localhost:3306/games?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC","root","Sa1_Sony_4");
+			con = DriverManager.getConnection("jdbc:mysql://localhost:3306/games?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC",user,password);
 			state = con.createStatement();
 			return true;
 		} catch (SQLException e) {
@@ -110,5 +111,11 @@ public class GameRepository  {
 			System.out.println("Closing connection");
 			e.printStackTrace();
 		}
+	}
+
+	public void setDBConf(String user, String password) {
+		this.user = user;
+		this.password = password;
+		
 	}
 }
