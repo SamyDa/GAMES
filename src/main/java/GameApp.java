@@ -13,7 +13,7 @@ public class GameApp {
                     
         int choice = 0;
         System.out.println("GameApp from Samy Daouri  -  Version 0.1   - " +  currentDate);
-        System.out.println();
+        System.out.println();  
         displayMenu();
         do{         
             System.out.println("\nWhich option do you want to execute (99 to display the menu again)?");                     
