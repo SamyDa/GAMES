@@ -2,14 +2,15 @@ package be.belfius.Daouri_Samy_Games.domain;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.util.Date;
+import java.time.LocalDate;
+
 
 public class Borrow extends DataStructure {
 	
 	private int gameId;
 	private int borrowerId;
-	private Date borrowDate;
-	private Date returnDate;
+	private LocalDate borrowDate;
+	private LocalDate returnDate;
 	private Game game;
 	private Borrower borrower;
 	
@@ -17,7 +18,7 @@ public class Borrow extends DataStructure {
 		super();
 		this.tableName = "Borrow";
 	}
-	public Borrow(int id, int gameId, int borrowerId, Date borrowDate, Date returnDate) {
+	public Borrow(int id, int gameId, int borrowerId, LocalDate borrowDate, LocalDate returnDate) {
 		this.id = id;
 		this.gameId = gameId;
 		this.borrowerId = borrowerId;
@@ -38,19 +39,21 @@ public class Borrow extends DataStructure {
 	public void setBorrowerId(int borrowerId) {
 		this.borrowerId = borrowerId;
 	}
-	public Date getBorrowDate() {
+	public LocalDate getBorrowDate() {
 		return borrowDate;
 	}
-	public void setBorrowDate(Date borrowDate) {
+	public void setBorrowDate(LocalDate borrowDate) {
 		this.borrowDate = borrowDate;
 	}
-	public Date getReturnDate() {
-		if (returnDate!= null)
-			return returnDate;
-		else
-			return new Date(0L); 
+	public LocalDate getReturnDate() {
+		LocalDate date =  LocalDate.MIN;
+		if (returnDate!= null) {
+			date = returnDate;
+		}
+		
+		return date;
 	}
-	public void setReturnDate(Date returnDate) {
+	public void setReturnDate(LocalDate returnDate) {
 		this.returnDate = returnDate;
 	}
 
@@ -74,8 +77,11 @@ public class Borrow extends DataStructure {
 				this.id = set.getInt("id");
 				this.gameId = set.getInt("game_id");
 				this.borrowerId = set.getInt("borrower_id");
-				this.borrowDate = set.getDate("borrow_date");
-				this.returnDate = set.getDate("return_date");
+				this.borrowDate = set.getDate("borrow_date").toLocalDate();
+				if (set.getDate("return_date") != null)
+					this.returnDate = set.getDate("return_date").toLocalDate();
+				else
+					this.returnDate = LocalDate.of(0001, 01, 01);
 				return true;
 			}	
 

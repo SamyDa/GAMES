@@ -2,11 +2,17 @@ package be.belfius.Daouri_Samy_Games.service;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.ZoneId;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 import be.belfius.Daouri_Samy_Games.domain.Borrow;
+import be.belfius.Daouri_Samy_Games.domain.Borrower;
 import be.belfius.Daouri_Samy_Games.domain.DataStructure;
+import be.belfius.Daouri_Samy_Games.domain.Game;
 import be.belfius.Daouri_Samy_Games.repository.GameRepository;
 
 public class GameService extends Throwable{
@@ -107,8 +113,29 @@ public class GameService extends Throwable{
 		return list;
 	}
 
-	public void setDBConf(String user, String password) {
+	public boolean setDBConf(String user, String password) {
 		gameRepository.setDBConf(user, password);
+		if (gameRepository.openConnection()) {
+			gameRepository.closeConnection();
+			return true;
+		}
+		else{
+			return false;
+		}
+			
+		 
+	}
+
+	public boolean registerBorrowing(Game game, Borrower borrower) {
+		boolean swSuccess = false;;
+		Borrow borrow = new Borrow(-1, game.getId(), borrower.getId(), LocalDate.now(), null);
+		if(gameRepository.openConnection()) {
+			swSuccess = gameRepository.setBorrow(borrow);
+			gameRepository.closeConnection();
+			return swSuccess;
+		}
+		else 
+			return false;
 		
 	}
 	

@@ -13,6 +13,9 @@ import java.util.List;
 import java.util.Optional;
 import java.util.Scanner;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import be.belfius.Daouri_Samy_Games.domain.Borrow;
 import be.belfius.Daouri_Samy_Games.domain.Borrower;
 import be.belfius.Daouri_Samy_Games.domain.Category;
@@ -21,17 +24,19 @@ import be.belfius.Daouri_Samy_Games.domain.DifficultyLevel;
 import be.belfius.Daouri_Samy_Games.domain.Game;
 import be.belfius.Daouri_Samy_Games.service.GameService;
 
-/**
- * Hello world!
- *
- */
+
 public class App 
 {
 	private static Scanner scanner = new Scanner(System.in);
     private static LocalDateTime currentDate = LocalDateTime.now();
     private static GameService  gameService = new GameService();
+    public static Logger logger = LoggerFactory.getLogger(Test.class);
+    
     
     public static void main(String[] args) {
+    	System.setProperty("org.slf4j.simpleLogger.showDateTime", "true");
+		System.setProperty("org.slf4j.simpleLogger.dateTimeFormat", "yyyy-MM-dd HH:mm:ss");
+		
         int choice = 0;
         System.out.println("GameApp from Samy Daouri  -  Version 0.1   - " +  currentDate);
         System.out.println();
@@ -54,14 +59,16 @@ public class App
     }
 
     private static void getConnectionConf() {
-    	
-    	System.out.println("Enter your DB user  : ");
-    	String user = scanner.next();
-    	
-    	System.out.println("Enter your DB password");
-		String password = scanner.next();
-		
-		gameService.setDBConf(user, password);
+    	while(true) {
+	    	System.out.println("Enter your DB user  : ");
+	    	String user = scanner.next();
+	    	
+	    	System.out.println("Enter your DB password");
+			String password = scanner.next();
+			
+			if(gameService.setDBConf(user, password))
+				break;
+    	}
 	}
 
 	private static void displayMenu() {
@@ -79,11 +86,13 @@ public class App
         System.out.println("\t 7. Show borrowed games");
         System.out.println("\t 8. Advanced search: difficulty");
         System.out.println("\t 9. Complex search: borrowers");
+        System.out.println("\t10. Search the borrowing on dates  ");
+        System.out.println("\t11. Register a new borrowing ");
         System.out.println("\n------------------------------------------------------------");
     }
     
     private static void processChoice(int choice) {
-            
+            logger.trace("User chose option : " + choice);
             switch(choice) {
             case 1 :
             	showFirstGameCategory();
@@ -112,6 +121,11 @@ public class App
             case 9 :
             	searchComplex();
             	break;
+            case 10: 
+            	searchBorrowing();
+            	break;
+            case 11 : 
+            	registerBorrowing();
             case 99:
             	displayMenu();
                 break;
@@ -121,6 +135,106 @@ public class App
                 break;
         }
     }
+
+	private static void registerBorrowing() {
+		System.out.println("Please enter (a part of ) the game name that is borrowed : ");
+		List<Game> gameList = new ArrayList<Game>(); 
+		while(gameList.isEmpty()) {
+			System.out.println("( *** to leave)");
+			String gameName = scanner.next();
+			if("***".equals(gameName))
+				return;
+			
+			Game game = new Game();
+			game.setName(gameName);
+			
+			//get all the games that contain the game name
+			gameList = gameService.fillList(game);
+			
+			if(gameList.isEmpty())
+				System.out.println("Please try again, tha game has not been found ");
+		}
+		int i = 0;
+		for(Game game : gameList) {
+			i++;
+			System.out.println("\t" + i + ".\t" +  game.getName() );
+		}
+		int choiceGame = 0;
+		
+		while(choiceGame > gameList.size() || choiceGame < 1 ) {
+			
+			System.out.println("Please select the index of the game you want to select ( *** to leave ): ");
+			try {
+				
+				choiceGame = scanner.nextInt();
+				
+				if(choiceGame > gameList.size() || choiceGame < 1)
+					System.out.println("This choice is invalid, please try again");
+				
+	        }catch(InputMismatchException e) {
+	        	choiceGame = 0;
+	        	System.out.println("Only integers are allowed, please try again");
+	        	scanner.next();
+	        	
+	        }
+			
+			
+		}
+		
+		System.out.println("Please enter (a part of ) the borrower : ");
+		List<Borrower> borrowerList = new ArrayList<Borrower>(); 
+		while(borrowerList.isEmpty()) {
+			System.out.println("( *** to leave)");
+			String borrowerName = scanner.next();
+			if("***".equals(borrowerName))
+				return;
+			
+			Borrower borrower = new Borrower();
+			borrower.setName(borrowerName);
+			
+			//get all the games that contain the game name
+			borrowerList = gameService.fillList(borrower);
+			
+			if(borrowerList.isEmpty())
+				System.out.println("Please try again, tha borrower has not been found ");
+		}
+		
+		i=0;
+		for(Borrower borrower : borrowerList) {
+			i++;
+			System.out.println("\t" + i + ".\t" +  borrower.getName() );
+		}
+		
+		int choiceBorrower = 0;
+		
+		while(choiceBorrower > borrowerList.size() || choiceBorrower < 1 ) {
+			
+			System.out.println("Please select the index of the game you want to select ( *** to leave ): ");
+			try {
+				
+				choiceBorrower = scanner.nextInt();
+				
+				if(choiceBorrower > borrowerList.size() || choiceBorrower < 1)
+					System.out.println("This choice is invalid, please try again");
+				
+	        }catch(InputMismatchException e) {
+	        	choiceBorrower = 0;
+	        	System.out.println("Only integers are allowed, please try again");
+	        	scanner.next();
+	        	
+	        }
+			
+		}
+		
+		gameService.registerBorrowing( gameList.get(choiceGame-1) , borrowerList.get(choiceBorrower-1));
+		
+		
+	}
+
+	private static void searchBorrowing() {
+		// TODO Auto-generated method stub
+		
+	}
 
 	private static void searchComplex() {
 		//- The user can search on a (part of a) name of a borrower, this is not always at the beginning of the name.
@@ -218,14 +332,12 @@ public class App
 		//-Add the possibiliy to search the name of the borrower. Do this by giving him the opportunity to enter the name of
 		// the borrower (provide a list of all possible borrowers)
 		//- He must have the choice between choosing a name or exiting.
-		DateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
 		List<Borrow> borrowList = new ArrayList<Borrow>();
 		borrowList = gameService.fillList(new Borrow());
 		//find and fill Game and Borrower for each borrow
 		
 		System.out.println(String.format("%-10s","Borrow") + "\t"  + String.format("%-10s", "Return") + "\t"  + String.format("%-35s", "Game Name")  + "\t"  + "Borrower Name" );
 		System.out.println(String.format("%-10s","-------") + "\t"  + String.format("%-10s", "-------") + "\t"  + String.format("%-35s", "----------")  + "\t"  + "--------------" );
-		System.out.println("(Note : if the return date has not been specified, it is displayed as"+dateFormat.format(new Date(0L))+")");
 		System.out.println();
 		borrowList.forEach((n) -> {
 			Game game = new Game();
@@ -240,7 +352,7 @@ public class App
 			}});
 		Comparator<Borrow> compareByName = Comparator.comparing(Borrow::getBorrower, (s1,s2)-> {return s2.getName().compareTo(s1.getName());}).thenComparing(Borrow::getBorrowDate, (d1,d2) -> {return d2.compareTo(d1);});
 		borrowList.stream().sorted(compareByName).forEach(n -> {
-			System.out.println(String.format("%1$10s",dateFormat.format(n.getBorrowDate())) +"\t"+ String.format("%1$10s",dateFormat.format(n.getReturnDate())) + "\t" +String.format("%1$-35s",n.getGame().getName()) + "\t"+n.getBorrower().getName());
+			System.out.println(String.format("%1$10s",n.getBorrowDate()) +"\t"+ String.format("%1$10s",n.getReturnDate()) + "\t" +String.format("%1$-35s",n.getGame().getName()) + "\t"+n.getBorrower().getName());
 			});
 		while(true) {
 			System.out.println("If you want to filter on a specific borrower, please enter a name (\"*\" to quit): ");
@@ -248,9 +360,8 @@ public class App
 			if(!filterName.equals("*")) {
 				System.out.println(String.format("%-10s","Borrow") + "\t"  + String.format("%-10s", "Return") + "\t"  + String.format("%-35s", "Game Name")  + "\t"  + "Borrower Name" );
 				System.out.println(String.format("%-10s","-------") + "\t"  + String.format("%-10s", "-------") + "\t"  + String.format("%-35s", "----------")  + "\t"  + "--------------" );
-				System.out.println("(Note : if the return date has not been specified, it is displayed as"+dateFormat.format(new Date(0L))+")");
 				borrowList.stream().filter((n) -> n.getBorrower().getName().toUpperCase().contains(filterName.toUpperCase())).forEach(n -> {
-					System.out.println(String.format("%1$10s",dateFormat.format(n.getBorrowDate())) +"\t"+ String.format("%1$10s",dateFormat.format(n.getReturnDate())) + "\t" +String.format("%1$-35s",n.getGame().getName()) + "\t"+n.getBorrower().getName());});
+					System.out.println(String.format("%1$10s",n.getBorrowDate()) +"\t"+ String.format("%1$10s",n.getReturnDate()) + "\t" +String.format("%1$-35s",n.getGame().getName()) + "\t"+n.getBorrower().getName());});
 			}
 			else 
 				return;
