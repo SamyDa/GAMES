@@ -4,7 +4,10 @@ package be.belfius.Daouri_Samy_Games;
 import java.sql.SQLException;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
+import java.time.LocalDate;
 import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+import java.time.format.DateTimeParseException;
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.Date;
@@ -30,7 +33,7 @@ public class App
 	private static Scanner scanner = new Scanner(System.in);
     private static LocalDateTime currentDate = LocalDateTime.now();
     private static GameService  gameService = new GameService();
-    public static Logger logger = LoggerFactory.getLogger(Test.class);
+    public static Logger logger = LoggerFactory.getLogger(App.class);
     
     
     public static void main(String[] args) {
@@ -232,7 +235,95 @@ public class App
 	}
 
 	private static void searchBorrowing() {
-		// TODO Auto-generated method stub
+		// Search a borrowing after a certain date
+		//First, all the games are listed
+		List<Borrow> borrowList = gameService.fillList(new Borrow());
+		borrowList.forEach((n) -> {
+			Game game = new Game();
+			Borrower borrower = new Borrower() ;
+			n.setGame(game); 
+			n.setBorrower(borrower); 
+			try {
+				gameService.getDataByPosition(game, n.getGameId());
+				gameService.getDataByPosition(borrower, n.getBorrowerId());
+			} catch (Exception e) {
+				e.printStackTrace();
+			}});
+		//Then, it is asked to the user on which date he wants to filter 
+		System.out.println("What date do you want to search ? ");
+		System.out.println("\t1.\tBorrowing date");
+		System.out.println("\t2.\tReturning date");
+		System.out.println("\t3.\tBorrowing & Returning date");
+		int choice = 0;
+		while(choice < 1 || choice > 3) {
+			try {
+				System.out.println("Enter the option number : ");
+				choice = scanner.nextInt();
+				if(choice < 1 || choice > 3)
+					System.out.println("The selected option is not correct, please try again.");
+			}catch(InputMismatchException e) {
+				choice = 0;
+				scanner.next();
+				System.out.println("Only Integers are allowed");
+			}
+		}
+		LocalDate borrowDate = null;
+		LocalDate returnDate = null;
+		DateTimeFormatter formatter = DateTimeFormatter.ofPattern("d/MM/yyyy");
+		
+		if(choice == 1 || choice == 3 ) {
+			while(borrowDate == null) {
+				System.out.println("Please enter the borrowing date from which you want to filter : (DD/MM/YYYY)");
+				String date = scanner.next();
+				try {
+					borrowDate = LocalDate.parse(date, formatter);
+				}catch(DateTimeParseException e) {
+					System.out.println("Error during the parsing of the date, please verify your input and try again ");
+				}
+			}
+		}
+		
+		if (choice ==2 || choice ==3) {
+			
+			while(returnDate == null) {
+				System.out.println("Please enter the returning date from which you want to filter : (DD/MM/YYYY)");
+				String date = scanner.next();
+				try {
+				returnDate = LocalDate.parse(date, formatter);
+				}catch(DateTimeParseException e) {
+					System.out.println("Error during the parsing of the date, please verify your input and try again ");
+				}
+			}
+		}
+		
+		//compilation purpose in labmda expression
+		LocalDate dateFrom = borrowDate;
+		LocalDate dateTo = returnDate;
+		
+		System.out.println(String.format("%-10s","Borrow") + "\t"  + String.format("%-10s", "Return") + "\t"  + String.format("%-35s", "Game Name")  + "\t"  + "Borrower Name" );
+		System.out.println(String.format("%-10s","-------") + "\t"  + String.format("%-10s", "-------") + "\t"  + String.format("%-35s", "----------")  + "\t"  + "--------------" );
+		switch(choice) {
+		
+		case 1 :
+			
+			borrowList.stream().filter(n -> n.getBorrowDate().isAfter(dateFrom)).forEach(n -> {
+				System.out.println(String.format("%1$10s",n.getBorrowDate()) +"\t"+ String.format("%1$10s",n.getReturnDate()) + "\t" +String.format("%1$-35s",n.getGame().getName()) + "\t"+n.getBorrower().getName());});;
+			break;
+		case 2 : 
+			//compilation purpose in labmda expression
+			borrowList.stream().filter(n -> dateTo.isBefore(n.getReturnDate())).forEach(n -> {
+				System.out.println(String.format("%1$10s",n.getBorrowDate()) +"\t"+ String.format("%1$10s",n.getReturnDate()) + "\t" +String.format("%1$-35s",n.getGame().getName()) + "\t"+n.getBorrower().getName());});;
+			break;
+		case 3 :
+			//compilation purpose in labmda expression
+			borrowList.stream().filter(n -> (dateFrom.isBefore(n.getReturnDate()) && dateTo.isAfter(n.getReturnDate()))).forEach(n -> {
+				System.out.println(String.format("%1$10s",n.getBorrowDate()) +"\t"+ String.format("%1$10s",n.getReturnDate()) + "\t" +String.format("%1$-35s",n.getGame().getName()) + "\t"+n.getBorrower().getName());});;
+			break;
+		
+		}
+		
+		
+		
 		
 	}
 

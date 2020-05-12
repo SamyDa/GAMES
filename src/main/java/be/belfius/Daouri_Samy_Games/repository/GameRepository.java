@@ -27,7 +27,8 @@ public class GameRepository  {
 			return true;
 		} catch (SQLException e) {
 			
-			e.printStackTrace();
+			//e.printStackTrace();
+			App.logger.error("Error during DB connection : \n" + e);
 			return false;
 		}
 	}	
@@ -39,7 +40,8 @@ public class GameRepository  {
 				return true;
 			}
 		} catch (SQLException e) {
-			e.printStackTrace();
+			//e.printStackTrace();
+			App.logger.error("Error during DB close : \n" + e);
 			return false;
 		}
 		return false;
@@ -48,7 +50,8 @@ public class GameRepository  {
 		try {
 			result = state.executeQuery("SELECT * FROM "+ tableName);
 		} catch (SQLException e) {
-			e.printStackTrace();
+			//e.printStackTrace();
+			App.logger.error("Error during getList : query = "+"SELECT * FROM "+ tableName+ "\n" + e);
 		}	
 		
 		return result;
@@ -68,7 +71,8 @@ public class GameRepository  {
 			result = state.executeQuery(query);
 			App.logger.info("Query to DB : " + query);
 		} catch (SQLException e) {
-			e.printStackTrace();
+			//e.printStackTrace();
+			App.logger.error("Error during getList : query = " + query + "\n" + e);
 		}	
 		
 		return result;
