@@ -15,6 +15,8 @@ import java.util.InputMismatchException;
 import java.util.List;
 import java.util.Optional;
 import java.util.Scanner;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -91,6 +93,7 @@ public class App
         System.out.println("\t 9. Complex search: borrowers");
         System.out.println("\t10. Search the borrowing on dates  ");
         System.out.println("\t11. Register a new borrowing ");
+        System.out.println("\t12. Return a game");
         System.out.println("\n------------------------------------------------------------");
     }
     
@@ -129,6 +132,10 @@ public class App
             	break;
             case 11 : 
             	registerBorrowing();
+            	break;
+            case 12 : 
+            	returnGame();
+            	break;
             case 99:
             	displayMenu();
                 break;
@@ -138,6 +145,103 @@ public class App
                 break;
         }
     }
+
+	private static void returnGame() {
+		System.out.println("Who is the Borrower returning the game ? ");
+		String name = scanner.next();
+		Borrower borrower = new Borrower();
+		borrower.setId(-1);
+		borrower.setName(name);
+		int choice  = 0;
+		List<Borrower> borrowerList = gameService.fillList(borrower);
+		if (borrowerList.size() == 0 ) {
+			System.out.println("Nobody was found with a name like "+ name + ". Please try again ") ;
+			try {
+				Thread.sleep(1000);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			return;
+		}
+		else if(borrowerList.size() > 1 ) {
+			System.out.println("Please select the correct borrower in the below list (0 to leave) :");
+			int i = 0;
+			for(Borrower elBor : borrowerList) {
+				i++;
+				System.out.println("\t" + i +".\t" + elBor.getName());
+			}
+			while(choice< 1 || choice > borrowerList.size()) {
+				try {
+					choice = scanner.nextInt();
+					if (choice ==0)
+						return;
+				}catch(InputMismatchException e) {
+					choice = 0 ;
+					scanner.next();
+					System.out.println("The choice is incorrect. Only Integers (1 -> "+borrowerList.size()+" ) are allowed");
+				}
+			}
+			borrower = borrowerList.get(choice-1); 
+		}
+		else if(borrowerList.size() == 1) {
+			borrower = borrowerList.get(0); 
+		}
+		
+		List<Borrow> borrowList = gameService.fillList(new Borrow());
+		borrowList.forEach((n) -> {
+			Game game = new Game();
+			Borrower borr = new Borrower() ;
+			n.setGame(game); 
+			n.setBorrower(borr); 
+			try {
+				gameService.getDataByPosition(game, n.getGameId());
+				gameService.getDataByPosition(borr, n.getBorrowerId());
+			} catch (Exception e) {
+				e.printStackTrace();
+			}});
+		//Compilation purpose
+		Borrower bor = borrower;
+		//List <Borrow> filteredList = borrowList.stream().filter(n -> n.getBorrower().getName().equals(bor.getName()) && (n.getReturnDate()==null)).collect(Collectors.toList());
+		List <Borrow> filteredList = borrowList.stream().filter(n -> n.getBorrower().getName().equals(bor.getName()) && LocalDate.of(1,1,1).equals(n.getReturnDate())).collect(Collectors.toList());
+		
+		if(filteredList.size() == 0 ) {
+			System.out.println("No pending borrowing has been found");
+			try {
+				Thread.sleep(1000);
+			} catch (InterruptedException e) {
+				e.printStackTrace();
+			}
+			return;
+		}
+		System.out.println("The borrowing list for this person is : ");
+		int i= 0;
+		for(Borrow element : filteredList) {
+			
+			System.out.println("\t" + ++i + ".\t "+element.getGame().getName() + " (borrowed on "+ element.getBorrowDate() +")\t" + element.getReturnDate() );
+		}
+		choice = 0;
+		while(choice< 1 || choice > filteredList.size()) {
+			try {
+				System.out.println("Please, select the game (index) to return (0 to leave):");
+				choice = scanner.nextInt();
+				if (choice==0)
+					return;
+			}catch(InputMismatchException e) {
+				choice = 0 ;
+				scanner.next();
+				System.out.println("The choice is incorrect. Only Integers (1 -> "+filteredList.size()+" ) are allowed");
+			}
+		}
+		filteredList.get(choice-1).setReturnDate(LocalDate.now());
+		if(gameService.updateRow(filteredList.get(choice-1))) {
+			System.out.println("The game has been returned");
+		}
+		else 
+			System.out.println("Something went wrong, cannot be returned");;
+		
+		
+	}
 
 	private static void registerBorrowing() {
 		System.out.println("Please enter (a part of ) the game name that is borrowed : ");

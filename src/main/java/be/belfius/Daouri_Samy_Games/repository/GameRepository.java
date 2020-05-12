@@ -136,4 +136,28 @@ public class GameRepository  {
 		
 		return false;
 	}
+	public boolean updateRow(DataStructure update) {
+		try {
+			PreparedStatement pstmt;
+			String query;
+			con.setAutoCommit(false);
+			if (update instanceof Borrow) {
+				pstmt = con.prepareStatement( "update borrow set game_id = ? , borrower_id = ? , borrow_date = ? , return_date = ? where id = ?");
+				pstmt.setInt(1, ((Borrow) update).getGameId());
+				pstmt.setInt(2, ((Borrow) update).getBorrowerId());
+				pstmt.setDate(3, Date.valueOf(((Borrow) update).getBorrowDate()));
+				pstmt.setDate(4, Date.valueOf(((Borrow) update).getReturnDate()));
+				pstmt.setInt(5, ((Borrow) update).getId());
+				pstmt.execute();
+				
+			}
+			
+			con.commit();
+			return true;
+			//add new if instanceof for update in other class
+		} catch (SQLException e) {
+			e.printStackTrace();
+			return false;
+		}
+	}
 }

@@ -138,5 +138,16 @@ public class GameService extends Throwable{
 			return false;
 		
 	}
+
+	public boolean updateRow(DataStructure update) {
+		boolean swSuccess = false;;
+		if(gameRepository.openConnection()) {
+			swSuccess = gameRepository.updateRow(update);
+			gameRepository.closeConnection();
+			return swSuccess;
+		}
+		else 
+			return false;
+	}
 	
 }
