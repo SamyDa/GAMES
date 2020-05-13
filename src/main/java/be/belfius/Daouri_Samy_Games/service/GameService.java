@@ -19,7 +19,8 @@ public class GameService extends Throwable{
 	
 	private GameRepository gameRepository = new GameRepository();
 	
-	
+	//getDataByPosition is used to retrieve data from the DB based. The T structure is used to find the table to search
+	// the position is used to retrieve a specific id in the table
 	public <T> boolean getDataByPosition(T structure , int position) throws Exception{
 		DataStructure element = (DataStructure) structure;
 		ResultSet result ;

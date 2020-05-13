@@ -45,6 +45,7 @@ public class App
         int choice = 0;
         System.out.println("GameApp from Samy Daouri  -  Version 0.1   - " +  currentDate);
         System.out.println();
+        //get user and password for DB connection
         getConnectionConf();
         displayMenu();
         do{         
@@ -331,10 +332,7 @@ public class App
 	        }
 			
 		}
-		
 		gameService.registerBorrowing( gameList.get(choiceGame-1) , borrowerList.get(choiceBorrower-1));
-		
-		
 	}
 
 	private static void searchBorrowing() {
