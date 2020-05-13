@@ -126,7 +126,7 @@ public class GameRepository  {
 			PreparedStatement pstmt = con.prepareStatement("insert into borrow (game_id, borrower_id, borrow_date) values ( ? , ? , ?)");
 			pstmt.setInt(1, borrow.getGameId());
 			pstmt.setInt(2, borrow.getBorrowerId());
-			pstmt.setDate(3, Date.valueOf(borrow.getBorrowDate()));
+			pstmt.setDate(3, Date.valueOf(borrow.getBorrowDate().plusDays(1)));
 			pstmt.execute();		
 			con.commit();
 		} catch (SQLException e) {
@@ -145,8 +145,8 @@ public class GameRepository  {
 				pstmt = con.prepareStatement( "update borrow set game_id = ? , borrower_id = ? , borrow_date = ? , return_date = ? where id = ?");
 				pstmt.setInt(1, ((Borrow) update).getGameId());
 				pstmt.setInt(2, ((Borrow) update).getBorrowerId());
-				pstmt.setDate(3, Date.valueOf(((Borrow) update).getBorrowDate()));
-				pstmt.setDate(4, Date.valueOf(((Borrow) update).getReturnDate()));
+				pstmt.setDate(3, Date.valueOf(((Borrow) update).getBorrowDate().plusDays(1)));
+				pstmt.setDate(4, Date.valueOf(((Borrow) update).getReturnDate().plusDays(1)));
 				pstmt.setInt(5, ((Borrow) update).getId());
 				pstmt.execute();
 				

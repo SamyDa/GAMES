@@ -47,16 +47,8 @@ public class GameService extends Throwable{
 		return true;
 	}
 
-	public int getMaxId(String tableName) {
-		int id = 0;
-		if(gameRepository.openConnection()) {
-			id = gameRepository.getMaxId(tableName);
-			gameRepository.closeConnection();
-		}
-		return id;
-	}
 
-
+	//Get the data with a name as filter
 	public boolean getDataByName(DataStructure element)  throws Exception{
 		if (element instanceof Borrow)
 			return false;
@@ -76,6 +68,7 @@ public class GameService extends Throwable{
 		return false;
 	}
 
+	//retrieve a list of elements using generics and factory pattern to create a new object without knowing the class
 	@SuppressWarnings({ "deprecation", "unchecked" })
 	public <T> List<T> fillList(T element ) {
 		List<T> list = new ArrayList<T>();
@@ -113,7 +106,8 @@ public class GameService extends Throwable{
 		
 		return list;
 	}
-
+	
+	//Register user and password
 	public boolean setDBConf(String user, String password) {
 		gameRepository.setDBConf(user, password);
 		if (gameRepository.openConnection()) {
@@ -123,10 +117,9 @@ public class GameService extends Throwable{
 		else{
 			return false;
 		}
-			
-		 
 	}
 
+	///Insert a new borrowing based on the game and the borrower
 	public boolean registerBorrowing(Game game, Borrower borrower) {
 		boolean swSuccess = false;;
 		Borrow borrow = new Borrow(-1, game.getId(), borrower.getId(), LocalDate.now(), null);
@@ -137,9 +130,9 @@ public class GameService extends Throwable{
 		}
 		else 
 			return false;
-		
 	}
 
+	//update a specific row (based on the id ) in the DB
 	public boolean updateRow(DataStructure update) {
 		boolean swSuccess = false;;
 		if(gameRepository.openConnection()) {

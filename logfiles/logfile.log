@@ -1,15 +1,878 @@
-15:10:39.843 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT Max(ID) FROM Game
-15:10:39.847 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT * FROM Game WHERE ID  = 1
-15:10:39.847 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB closed
-15:10:39.855 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB games
-15:10:39.856 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT Max(ID) FROM Borrower
-15:10:39.856 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT * FROM Borrower WHERE ID  = 1
-15:10:39.856 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB closed
-15:10:39.865 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB games
-15:10:39.865 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT Max(ID) FROM Game
-15:10:39.866 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT * FROM Game WHERE ID  = 87
-15:10:39.866 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB closed
-15:10:39.875 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB games
-15:10:39.876 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT Max(ID) FROM Borrower
-15:10:39.876 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT * FROM Borrower WHERE ID  = 22
-15:10:39.876 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB closed
+09:45:51.560 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB games
+09:45:51.568 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT * FROM Game WHERE Upper(game_name) like ('%VALE%')
+09:45:51.568 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB closed
+09:45:58.072 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB games
+09:45:58.072 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT * FROM Game WHERE Upper(game_name) like ('%VAL%')
+09:45:58.072 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB closed
+09:46:03.840 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB games
+09:46:03.841 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT * FROM Borrower WHERE Upper(borrower_name) like ('%VAL%')
+09:46:03.842 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB closed
+09:46:07.024 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB games
+09:46:07.092 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB closed
+09:46:10.064 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB games
+09:46:10.065 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT * FROM Borrow
+09:46:10.066 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB closed
+09:46:10.074 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB games
+09:46:10.074 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT Max(ID) FROM Game
+09:46:10.074 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT * FROM Game WHERE ID  = 15
+09:46:10.074 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB closed
+09:46:10.082 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB games
+09:46:10.083 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT Max(ID) FROM Borrower
+09:46:10.083 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT * FROM Borrower WHERE ID  = 14
+09:46:10.083 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB closed
+09:46:10.091 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB games
+09:46:10.091 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT Max(ID) FROM Game
+09:46:10.091 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT * FROM Game WHERE ID  = 125
+09:46:10.092 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB closed
+09:46:10.099 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB games
+09:46:10.099 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT Max(ID) FROM Borrower
+09:46:10.100 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT * FROM Borrower WHERE ID  = 7
+09:46:10.100 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB closed
+09:46:10.108 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB games
+09:46:10.109 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT Max(ID) FROM Game
+09:46:10.109 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT * FROM Game WHERE ID  = 216
+09:46:10.109 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB closed
+09:46:10.121 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB games
+09:46:10.122 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT Max(ID) FROM Borrower
+09:46:10.122 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT * FROM Borrower WHERE ID  = 2
+09:46:10.122 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB closed
+09:46:10.131 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB games
+09:46:10.131 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT Max(ID) FROM Game
+09:46:10.131 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT * FROM Game WHERE ID  = 77
+09:46:10.131 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB closed
+09:46:10.138 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB games
+09:46:10.139 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT Max(ID) FROM Borrower
+09:46:10.139 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT * FROM Borrower WHERE ID  = 4
+09:46:10.139 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB closed
+09:46:10.147 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB games
+09:46:10.147 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT Max(ID) FROM Game
+09:46:10.148 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT * FROM Game WHERE ID  = 145
+09:46:10.148 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB closed
+09:46:10.156 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB games
+09:46:10.156 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT Max(ID) FROM Borrower
+09:46:10.156 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT * FROM Borrower WHERE ID  = 11
+09:46:10.156 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB closed
+09:46:10.164 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB games
+09:46:10.164 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT Max(ID) FROM Game
+09:46:10.164 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT * FROM Game WHERE ID  = 11
+09:46:10.164 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB closed
+09:46:10.172 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB games
+09:46:10.172 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT Max(ID) FROM Borrower
+09:46:10.173 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT * FROM Borrower WHERE ID  = 14
+09:46:10.173 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB closed
+09:46:10.180 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB games
+09:46:10.180 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT Max(ID) FROM Game
+09:46:10.181 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT * FROM Game WHERE ID  = 5
+09:46:10.181 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB closed
+09:46:10.188 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB games
+09:46:10.188 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT Max(ID) FROM Borrower
+09:46:10.189 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT * FROM Borrower WHERE ID  = 7
+09:46:10.189 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB closed
+09:46:10.196 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB games
+09:46:10.196 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT Max(ID) FROM Game
+09:46:10.197 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT * FROM Game WHERE ID  = 66
+09:46:10.197 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB closed
+09:46:10.204 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB games
+09:46:10.204 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT Max(ID) FROM Borrower
+09:46:10.204 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT * FROM Borrower WHERE ID  = 21
+09:46:10.205 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB closed
+09:46:10.212 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB games
+09:46:10.212 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT Max(ID) FROM Game
+09:46:10.212 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT * FROM Game WHERE ID  = 99
+09:46:10.213 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB closed
+09:46:10.220 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB games
+09:46:10.220 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT Max(ID) FROM Borrower
+09:46:10.221 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT * FROM Borrower WHERE ID  = 14
+09:46:10.221 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB closed
+09:46:10.229 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB games
+09:46:10.229 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT Max(ID) FROM Game
+09:46:10.229 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT * FROM Game WHERE ID  = 214
+09:46:10.229 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB closed
+09:46:10.237 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB games
+09:46:10.237 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT Max(ID) FROM Borrower
+09:46:10.237 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT * FROM Borrower WHERE ID  = 17
+09:46:10.237 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB closed
+09:46:10.246 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB games
+09:46:10.246 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT Max(ID) FROM Game
+09:46:10.246 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT * FROM Game WHERE ID  = 132
+09:46:10.246 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB closed
+09:46:10.254 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB games
+09:46:10.254 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT Max(ID) FROM Borrower
+09:46:10.254 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT * FROM Borrower WHERE ID  = 18
+09:46:10.254 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB closed
+09:46:10.262 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB games
+09:46:10.263 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT Max(ID) FROM Game
+09:46:10.263 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT * FROM Game WHERE ID  = 174
+09:46:10.263 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB closed
+09:46:10.270 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB games
+09:46:10.271 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT Max(ID) FROM Borrower
+09:46:10.271 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT * FROM Borrower WHERE ID  = 13
+09:46:10.271 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB closed
+09:46:10.279 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB games
+09:46:10.279 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT Max(ID) FROM Game
+09:46:10.279 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT * FROM Game WHERE ID  = 122
+09:46:10.279 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB closed
+09:46:10.287 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB games
+09:46:10.287 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT Max(ID) FROM Borrower
+09:46:10.287 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT * FROM Borrower WHERE ID  = 21
+09:46:10.288 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB closed
+09:46:10.295 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB games
+09:46:10.295 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT Max(ID) FROM Game
+09:46:10.296 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT * FROM Game WHERE ID  = 26
+09:46:10.296 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB closed
+09:46:10.303 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB games
+09:46:10.304 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT Max(ID) FROM Borrower
+09:46:10.304 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT * FROM Borrower WHERE ID  = 25
+09:46:10.304 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB closed
+09:46:10.313 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB games
+09:46:10.313 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT Max(ID) FROM Game
+09:46:10.313 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT * FROM Game WHERE ID  = 94
+09:46:10.313 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB closed
+09:46:10.321 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB games
+09:46:10.321 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT Max(ID) FROM Borrower
+09:46:10.321 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT * FROM Borrower WHERE ID  = 16
+09:46:10.322 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB closed
+09:46:10.328 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB games
+09:46:10.329 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT Max(ID) FROM Game
+09:46:10.329 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT * FROM Game WHERE ID  = 156
+09:46:10.329 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB closed
+09:46:10.337 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB games
+09:46:10.337 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT Max(ID) FROM Borrower
+09:46:10.337 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT * FROM Borrower WHERE ID  = 19
+09:46:10.337 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB closed
+09:46:10.345 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB games
+09:46:10.345 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT Max(ID) FROM Game
+09:46:10.346 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT * FROM Game WHERE ID  = 120
+09:46:10.346 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB closed
+09:46:10.353 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB games
+09:46:10.354 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT Max(ID) FROM Borrower
+09:46:10.354 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT * FROM Borrower WHERE ID  = 17
+09:46:10.354 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB closed
+09:46:10.362 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB games
+09:46:10.362 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT Max(ID) FROM Game
+09:46:10.362 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT * FROM Game WHERE ID  = 176
+09:46:10.362 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB closed
+09:46:10.370 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB games
+09:46:10.370 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT Max(ID) FROM Borrower
+09:46:10.371 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT * FROM Borrower WHERE ID  = 22
+09:46:10.371 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB closed
+09:46:10.378 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB games
+09:46:10.379 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT Max(ID) FROM Game
+09:46:10.379 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT * FROM Game WHERE ID  = 33
+09:46:10.379 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB closed
+09:46:10.391 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB games
+09:46:10.392 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT Max(ID) FROM Borrower
+09:46:10.392 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT * FROM Borrower WHERE ID  = 5
+09:46:10.392 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB closed
+09:46:10.400 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB games
+09:46:10.401 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT Max(ID) FROM Game
+09:46:10.401 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT * FROM Game WHERE ID  = 37
+09:46:10.401 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB closed
+09:46:10.409 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB games
+09:46:10.410 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT Max(ID) FROM Borrower
+09:46:10.410 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT * FROM Borrower WHERE ID  = 16
+09:46:10.410 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB closed
+09:46:10.418 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB games
+09:46:10.418 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT Max(ID) FROM Game
+09:46:10.418 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT * FROM Game WHERE ID  = 28
+09:46:10.418 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB closed
+09:46:10.425 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB games
+09:46:10.426 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT Max(ID) FROM Borrower
+09:46:10.426 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT * FROM Borrower WHERE ID  = 17
+09:46:10.426 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB closed
+09:46:10.434 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB games
+09:46:10.434 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT Max(ID) FROM Game
+09:46:10.434 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT * FROM Game WHERE ID  = 96
+09:46:10.434 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB closed
+09:46:10.442 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB games
+09:46:10.442 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT Max(ID) FROM Borrower
+09:46:10.442 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT * FROM Borrower WHERE ID  = 1
+09:46:10.443 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB closed
+09:46:10.450 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB games
+09:46:10.451 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT Max(ID) FROM Game
+09:46:10.451 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT * FROM Game WHERE ID  = 45
+09:46:10.451 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB closed
+09:46:10.459 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB games
+09:46:10.459 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT Max(ID) FROM Borrower
+09:46:10.459 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT * FROM Borrower WHERE ID  = 3
+09:46:10.459 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB closed
+09:46:10.467 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB games
+09:46:10.467 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT Max(ID) FROM Game
+09:46:10.467 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT * FROM Game WHERE ID  = 200
+09:46:10.468 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB closed
+09:46:10.475 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB games
+09:46:10.475 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT Max(ID) FROM Borrower
+09:46:10.475 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT * FROM Borrower WHERE ID  = 5
+09:46:10.476 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB closed
+09:46:10.483 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB games
+09:46:10.483 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT Max(ID) FROM Game
+09:46:10.484 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT * FROM Game WHERE ID  = 203
+09:46:10.484 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB closed
+09:46:10.491 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB games
+09:46:10.491 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT Max(ID) FROM Borrower
+09:46:10.492 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT * FROM Borrower WHERE ID  = 16
+09:46:10.492 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB closed
+09:46:10.499 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB games
+09:46:10.499 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT Max(ID) FROM Game
+09:46:10.500 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT * FROM Game WHERE ID  = 71
+09:46:10.500 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB closed
+09:46:10.507 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB games
+09:46:10.507 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT Max(ID) FROM Borrower
+09:46:10.507 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT * FROM Borrower WHERE ID  = 27
+09:46:10.508 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB closed
+09:46:10.514 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB games
+09:46:10.514 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT Max(ID) FROM Game
+09:46:10.515 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT * FROM Game WHERE ID  = 86
+09:46:10.515 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB closed
+09:46:10.522 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB games
+09:46:10.522 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT Max(ID) FROM Borrower
+09:46:10.522 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT * FROM Borrower WHERE ID  = 30
+09:46:10.523 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB closed
+09:46:10.530 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB games
+09:46:10.530 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT Max(ID) FROM Game
+09:46:10.531 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT * FROM Game WHERE ID  = 79
+09:46:10.531 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB closed
+09:46:10.539 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB games
+09:46:10.539 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT Max(ID) FROM Borrower
+09:46:10.539 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT * FROM Borrower WHERE ID  = 24
+09:46:10.539 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB closed
+09:46:10.547 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB games
+09:46:10.548 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT Max(ID) FROM Game
+09:46:10.548 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT * FROM Game WHERE ID  = 143
+09:46:10.548 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB closed
+09:46:10.556 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB games
+09:46:10.556 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT Max(ID) FROM Borrower
+09:46:10.556 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT * FROM Borrower WHERE ID  = 19
+09:46:10.556 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB closed
+09:46:10.564 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB games
+09:46:10.564 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT Max(ID) FROM Game
+09:46:10.564 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT * FROM Game WHERE ID  = 1
+09:46:10.564 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB closed
+09:46:10.572 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB games
+09:46:10.572 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT Max(ID) FROM Borrower
+09:46:10.572 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT * FROM Borrower WHERE ID  = 1
+09:46:10.572 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB closed
+09:46:10.580 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB games
+09:46:10.581 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT Max(ID) FROM Game
+09:46:10.581 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT * FROM Game WHERE ID  = 1
+09:46:10.581 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB closed
+09:46:10.589 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB games
+09:46:10.589 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT Max(ID) FROM Borrower
+09:46:10.589 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT * FROM Borrower WHERE ID  = 1
+09:46:10.589 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB closed
+09:46:10.597 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB games
+09:46:10.597 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT Max(ID) FROM Game
+09:46:10.597 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT * FROM Game WHERE ID  = 87
+09:46:10.597 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB closed
+09:46:10.605 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB games
+09:46:10.605 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT Max(ID) FROM Borrower
+09:46:10.605 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT * FROM Borrower WHERE ID  = 22
+09:46:10.605 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB closed
+09:46:10.613 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB games
+09:46:10.614 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT Max(ID) FROM Game
+09:46:10.614 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT * FROM Game WHERE ID  = 87
+09:46:10.614 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB closed
+09:46:10.621 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB games
+09:46:10.622 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT Max(ID) FROM Borrower
+09:46:10.622 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT * FROM Borrower WHERE ID  = 20
+09:46:10.622 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB closed
+09:46:10.630 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB games
+09:46:10.630 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT Max(ID) FROM Game
+09:46:10.630 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT * FROM Game WHERE ID  = 216
+09:46:10.631 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB closed
+09:46:10.642 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB games
+09:46:10.642 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT Max(ID) FROM Borrower
+09:46:10.642 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT * FROM Borrower WHERE ID  = 20
+09:46:10.642 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB closed
+09:47:43.442 [main] INFO  be.belfius.Daouri_Samy_Games.App - Setting configuration for root
+09:47:43.872 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB games
+09:47:43.874 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB closed
+09:47:49.556 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB games
+09:47:49.570 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT * FROM Game WHERE Upper(game_name) like ('%UB%')
+09:47:49.571 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB closed
+09:47:53.762 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB games
+09:47:53.763 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT * FROM Borrower WHERE Upper(borrower_name) like ('%VAL%')
+09:47:53.764 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB closed
+09:49:04.033 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB games
+09:54:15.401 [main] INFO  be.belfius.Daouri_Samy_Games.App - Setting configuration for root
+09:54:15.715 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB games
+09:54:15.717 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB closed
+09:54:26.393 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB games
+09:54:26.408 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT * FROM Game WHERE Upper(game_name) like ('%A%')
+09:54:26.414 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB closed
+09:54:32.643 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB games
+09:54:32.646 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT * FROM Borrower WHERE Upper(borrower_name) like ('%A%')
+09:54:32.647 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB closed
+09:54:37.326 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB games
+09:54:37.392 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB closed
+09:54:38.988 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB games
+09:54:38.989 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT * FROM Borrow
+09:54:38.993 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB closed
+09:54:39.011 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB games
+09:54:39.012 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT Max(ID) FROM Game
+09:54:39.013 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT * FROM Game WHERE ID  = 15
+09:54:39.014 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB closed
+09:54:39.026 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB games
+09:54:39.027 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT Max(ID) FROM Borrower
+09:54:39.028 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT * FROM Borrower WHERE ID  = 14
+09:54:39.028 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB closed
+09:54:39.041 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB games
+09:54:39.042 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT Max(ID) FROM Game
+09:54:39.042 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT * FROM Game WHERE ID  = 125
+09:54:39.043 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB closed
+09:54:39.057 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB games
+09:54:39.057 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT Max(ID) FROM Borrower
+09:54:39.058 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT * FROM Borrower WHERE ID  = 7
+09:54:39.058 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB closed
+09:54:39.071 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB games
+09:54:39.072 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT Max(ID) FROM Game
+09:54:39.073 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT * FROM Game WHERE ID  = 216
+09:54:39.073 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB closed
+09:54:39.085 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB games
+09:54:39.086 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT Max(ID) FROM Borrower
+09:54:39.087 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT * FROM Borrower WHERE ID  = 2
+09:54:39.087 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB closed
+09:54:39.100 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB games
+09:54:39.101 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT Max(ID) FROM Game
+09:54:39.101 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT * FROM Game WHERE ID  = 77
+09:54:39.102 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB closed
+09:54:39.115 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB games
+09:54:39.115 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT Max(ID) FROM Borrower
+09:54:39.115 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT * FROM Borrower WHERE ID  = 4
+09:54:39.116 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB closed
+09:54:39.129 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB games
+09:54:39.130 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT Max(ID) FROM Game
+09:54:39.130 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT * FROM Game WHERE ID  = 145
+09:54:39.131 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB closed
+09:54:39.144 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB games
+09:54:39.145 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT Max(ID) FROM Borrower
+09:54:39.145 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT * FROM Borrower WHERE ID  = 11
+09:54:39.145 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB closed
+09:54:39.158 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB games
+09:54:39.159 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT Max(ID) FROM Game
+09:54:39.159 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT * FROM Game WHERE ID  = 11
+09:54:39.160 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB closed
+09:54:39.171 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB games
+09:54:39.172 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT Max(ID) FROM Borrower
+09:54:39.172 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT * FROM Borrower WHERE ID  = 14
+09:54:39.173 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB closed
+09:54:39.184 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB games
+09:54:39.185 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT Max(ID) FROM Game
+09:54:39.185 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT * FROM Game WHERE ID  = 5
+09:54:39.186 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB closed
+09:54:39.197 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB games
+09:54:39.198 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT Max(ID) FROM Borrower
+09:54:39.198 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT * FROM Borrower WHERE ID  = 7
+09:54:39.198 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB closed
+09:54:39.209 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB games
+09:54:39.209 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT Max(ID) FROM Game
+09:54:39.210 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT * FROM Game WHERE ID  = 66
+09:54:39.210 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB closed
+09:54:39.221 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB games
+09:54:39.221 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT Max(ID) FROM Borrower
+09:54:39.221 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT * FROM Borrower WHERE ID  = 21
+09:54:39.222 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB closed
+09:54:39.233 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB games
+09:54:39.233 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT Max(ID) FROM Game
+09:54:39.234 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT * FROM Game WHERE ID  = 99
+09:54:39.234 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB closed
+09:54:39.245 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB games
+09:54:39.245 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT Max(ID) FROM Borrower
+09:54:39.246 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT * FROM Borrower WHERE ID  = 14
+09:54:39.246 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB closed
+09:54:39.257 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB games
+09:54:39.257 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT Max(ID) FROM Game
+09:54:39.257 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT * FROM Game WHERE ID  = 214
+09:54:39.258 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB closed
+09:54:39.268 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB games
+09:54:39.269 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT Max(ID) FROM Borrower
+09:54:39.269 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT * FROM Borrower WHERE ID  = 17
+09:54:39.269 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB closed
+09:54:39.279 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB games
+09:54:39.280 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT Max(ID) FROM Game
+09:54:39.280 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT * FROM Game WHERE ID  = 132
+09:54:39.281 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB closed
+09:54:39.292 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB games
+09:54:39.292 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT Max(ID) FROM Borrower
+09:54:39.292 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT * FROM Borrower WHERE ID  = 18
+09:54:39.293 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB closed
+09:54:39.304 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB games
+09:54:39.304 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT Max(ID) FROM Game
+09:54:39.304 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT * FROM Game WHERE ID  = 174
+09:54:39.305 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB closed
+09:54:39.315 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB games
+09:54:39.316 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT Max(ID) FROM Borrower
+09:54:39.316 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT * FROM Borrower WHERE ID  = 13
+09:54:39.316 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB closed
+09:54:39.327 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB games
+09:54:39.327 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT Max(ID) FROM Game
+09:54:39.327 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT * FROM Game WHERE ID  = 122
+09:54:39.328 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB closed
+09:54:39.338 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB games
+09:54:39.338 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT Max(ID) FROM Borrower
+09:54:39.339 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT * FROM Borrower WHERE ID  = 21
+09:54:39.339 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB closed
+09:54:39.350 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB games
+09:54:39.350 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT Max(ID) FROM Game
+09:54:39.351 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT * FROM Game WHERE ID  = 26
+09:54:39.351 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB closed
+09:54:39.361 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB games
+09:54:39.362 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT Max(ID) FROM Borrower
+09:54:39.362 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT * FROM Borrower WHERE ID  = 25
+09:54:39.362 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB closed
+09:54:39.372 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB games
+09:54:39.373 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT Max(ID) FROM Game
+09:54:39.373 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT * FROM Game WHERE ID  = 94
+09:54:39.374 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB closed
+09:54:39.384 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB games
+09:54:39.384 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT Max(ID) FROM Borrower
+09:54:39.384 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT * FROM Borrower WHERE ID  = 16
+09:54:39.385 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB closed
+09:54:39.395 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB games
+09:54:39.395 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT Max(ID) FROM Game
+09:54:39.395 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT * FROM Game WHERE ID  = 156
+09:54:39.396 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB closed
+09:54:39.406 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB games
+09:54:39.406 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT Max(ID) FROM Borrower
+09:54:39.407 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT * FROM Borrower WHERE ID  = 19
+09:54:39.407 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB closed
+09:54:39.417 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB games
+09:54:39.417 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT Max(ID) FROM Game
+09:54:39.418 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT * FROM Game WHERE ID  = 120
+09:54:39.418 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB closed
+09:54:39.428 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB games
+09:54:39.428 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT Max(ID) FROM Borrower
+09:54:39.429 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT * FROM Borrower WHERE ID  = 17
+09:54:39.429 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB closed
+09:54:39.439 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB games
+09:54:39.439 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT Max(ID) FROM Game
+09:54:39.440 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT * FROM Game WHERE ID  = 176
+09:54:39.440 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB closed
+09:54:39.450 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB games
+09:54:39.450 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT Max(ID) FROM Borrower
+09:54:39.451 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT * FROM Borrower WHERE ID  = 22
+09:54:39.451 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB closed
+09:54:39.461 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB games
+09:54:39.461 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT Max(ID) FROM Game
+09:54:39.461 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT * FROM Game WHERE ID  = 33
+09:54:39.462 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB closed
+09:54:39.472 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB games
+09:54:39.472 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT Max(ID) FROM Borrower
+09:54:39.472 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT * FROM Borrower WHERE ID  = 5
+09:54:39.472 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB closed
+09:54:39.486 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB games
+09:54:39.486 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT Max(ID) FROM Game
+09:54:39.486 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT * FROM Game WHERE ID  = 37
+09:54:39.487 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB closed
+09:54:39.495 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB games
+09:54:39.496 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT Max(ID) FROM Borrower
+09:54:39.496 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT * FROM Borrower WHERE ID  = 16
+09:54:39.496 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB closed
+09:54:39.506 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB games
+09:54:39.506 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT Max(ID) FROM Game
+09:54:39.507 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT * FROM Game WHERE ID  = 28
+09:54:39.507 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB closed
+09:54:39.516 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB games
+09:54:39.517 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT Max(ID) FROM Borrower
+09:54:39.517 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT * FROM Borrower WHERE ID  = 17
+09:54:39.517 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB closed
+09:54:39.526 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB games
+09:54:39.526 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT Max(ID) FROM Game
+09:54:39.527 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT * FROM Game WHERE ID  = 96
+09:54:39.527 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB closed
+09:54:39.535 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB games
+09:54:39.536 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT Max(ID) FROM Borrower
+09:54:39.536 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT * FROM Borrower WHERE ID  = 1
+09:54:39.536 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB closed
+09:54:39.546 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB games
+09:54:39.547 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT Max(ID) FROM Game
+09:54:39.547 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT * FROM Game WHERE ID  = 45
+09:54:39.547 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB closed
+09:54:39.557 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB games
+09:54:39.557 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT Max(ID) FROM Borrower
+09:54:39.557 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT * FROM Borrower WHERE ID  = 3
+09:54:39.557 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB closed
+09:54:39.566 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB games
+09:54:39.566 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT Max(ID) FROM Game
+09:54:39.566 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT * FROM Game WHERE ID  = 200
+09:54:39.567 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB closed
+09:54:39.576 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB games
+09:54:39.576 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT Max(ID) FROM Borrower
+09:54:39.576 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT * FROM Borrower WHERE ID  = 5
+09:54:39.576 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB closed
+09:54:39.586 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB games
+09:54:39.586 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT Max(ID) FROM Game
+09:54:39.586 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT * FROM Game WHERE ID  = 203
+09:54:39.587 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB closed
+09:54:39.596 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB games
+09:54:39.596 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT Max(ID) FROM Borrower
+09:54:39.596 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT * FROM Borrower WHERE ID  = 16
+09:54:39.597 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB closed
+09:54:39.605 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB games
+09:54:39.605 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT Max(ID) FROM Game
+09:54:39.606 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT * FROM Game WHERE ID  = 71
+09:54:39.606 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB closed
+09:54:39.615 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB games
+09:54:39.615 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT Max(ID) FROM Borrower
+09:54:39.615 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT * FROM Borrower WHERE ID  = 27
+09:54:39.615 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB closed
+09:54:39.623 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB games
+09:54:39.624 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT Max(ID) FROM Game
+09:54:39.624 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT * FROM Game WHERE ID  = 86
+09:54:39.624 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB closed
+09:54:39.633 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB games
+09:54:39.633 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT Max(ID) FROM Borrower
+09:54:39.633 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT * FROM Borrower WHERE ID  = 30
+09:54:39.634 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB closed
+09:54:39.642 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB games
+09:54:39.642 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT Max(ID) FROM Game
+09:54:39.643 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT * FROM Game WHERE ID  = 79
+09:54:39.643 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB closed
+09:54:39.651 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB games
+09:54:39.652 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT Max(ID) FROM Borrower
+09:54:39.652 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT * FROM Borrower WHERE ID  = 24
+09:54:39.652 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB closed
+09:54:39.660 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB games
+09:54:39.661 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT Max(ID) FROM Game
+09:54:39.661 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT * FROM Game WHERE ID  = 143
+09:54:39.661 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB closed
+09:54:39.669 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB games
+09:54:39.670 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT Max(ID) FROM Borrower
+09:54:39.670 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT * FROM Borrower WHERE ID  = 19
+09:54:39.670 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB closed
+09:54:39.679 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB games
+09:54:39.679 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT Max(ID) FROM Game
+09:54:39.679 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT * FROM Game WHERE ID  = 1
+09:54:39.679 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB closed
+09:54:39.688 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB games
+09:54:39.688 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT Max(ID) FROM Borrower
+09:54:39.688 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT * FROM Borrower WHERE ID  = 1
+09:54:39.688 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB closed
+09:54:39.697 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB games
+09:54:39.697 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT Max(ID) FROM Game
+09:54:39.697 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT * FROM Game WHERE ID  = 1
+09:54:39.698 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB closed
+09:54:39.706 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB games
+09:54:39.706 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT Max(ID) FROM Borrower
+09:54:39.706 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT * FROM Borrower WHERE ID  = 1
+09:54:39.707 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB closed
+09:54:39.715 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB games
+09:54:39.715 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT Max(ID) FROM Game
+09:54:39.715 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT * FROM Game WHERE ID  = 87
+09:54:39.716 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB closed
+09:54:39.724 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB games
+09:54:39.724 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT Max(ID) FROM Borrower
+09:54:39.724 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT * FROM Borrower WHERE ID  = 22
+09:54:39.725 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB closed
+09:54:39.733 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB games
+09:54:39.733 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT Max(ID) FROM Game
+09:54:39.733 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT * FROM Game WHERE ID  = 87
+09:54:39.734 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB closed
+09:54:39.741 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB games
+09:54:39.742 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT Max(ID) FROM Borrower
+09:54:39.742 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT * FROM Borrower WHERE ID  = 20
+09:54:39.742 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB closed
+09:54:39.750 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB games
+09:54:39.750 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT Max(ID) FROM Game
+09:54:39.751 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT * FROM Game WHERE ID  = 216
+09:54:39.751 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB closed
+09:54:39.759 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB games
+09:54:39.760 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT Max(ID) FROM Borrower
+09:54:39.760 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT * FROM Borrower WHERE ID  = 20
+09:54:39.760 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB closed
+09:54:39.767 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB games
+09:54:39.769 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT Max(ID) FROM Game
+09:54:39.769 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT * FROM Game WHERE ID  = 211
+09:54:39.769 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB closed
+09:54:39.776 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB games
+09:54:39.776 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT Max(ID) FROM Borrower
+09:54:39.778 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT * FROM Borrower WHERE ID  = 30
+09:54:39.778 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB closed
+09:55:05.936 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB games
+09:55:05.937 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT * FROM Borrower WHERE Upper(borrower_name) like ('%FRAN%')
+09:55:05.937 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB closed
+09:55:05.946 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB games
+09:55:05.946 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT * FROM Borrow
+09:55:05.948 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB closed
+09:55:05.957 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB games
+09:55:05.957 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT Max(ID) FROM Game
+09:55:05.958 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT * FROM Game WHERE ID  = 15
+09:55:05.958 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB closed
+09:55:05.972 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB games
+09:55:05.972 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT Max(ID) FROM Borrower
+09:55:05.972 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT * FROM Borrower WHERE ID  = 14
+09:55:05.972 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB closed
+09:55:05.981 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB games
+09:55:05.981 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT Max(ID) FROM Game
+09:55:05.982 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT * FROM Game WHERE ID  = 125
+09:55:05.982 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB closed
+09:55:05.991 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB games
+09:55:05.991 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT Max(ID) FROM Borrower
+09:55:05.991 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT * FROM Borrower WHERE ID  = 7
+09:55:05.991 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB closed
+09:55:06.000 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB games
+09:55:06.000 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT Max(ID) FROM Game
+09:55:06.000 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT * FROM Game WHERE ID  = 216
+09:55:06.001 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB closed
+09:55:06.009 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB games
+09:55:06.010 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT Max(ID) FROM Borrower
+09:55:06.010 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT * FROM Borrower WHERE ID  = 2
+09:55:06.010 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB closed
+09:55:06.018 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB games
+09:55:06.019 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT Max(ID) FROM Game
+09:55:06.019 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT * FROM Game WHERE ID  = 77
+09:55:06.019 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB closed
+09:55:06.028 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB games
+09:55:06.028 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT Max(ID) FROM Borrower
+09:55:06.028 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT * FROM Borrower WHERE ID  = 4
+09:55:06.028 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB closed
+09:55:06.037 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB games
+09:55:06.037 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT Max(ID) FROM Game
+09:55:06.038 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT * FROM Game WHERE ID  = 145
+09:55:06.038 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB closed
+09:55:06.046 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB games
+09:55:06.046 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT Max(ID) FROM Borrower
+09:55:06.047 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT * FROM Borrower WHERE ID  = 11
+09:55:06.047 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB closed
+09:55:06.056 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB games
+09:55:06.056 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT Max(ID) FROM Game
+09:55:06.056 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT * FROM Game WHERE ID  = 11
+09:55:06.057 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB closed
+09:55:06.066 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB games
+09:55:06.066 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT Max(ID) FROM Borrower
+09:55:06.066 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT * FROM Borrower WHERE ID  = 14
+09:55:06.067 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB closed
+09:55:06.075 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB games
+09:55:06.076 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT Max(ID) FROM Game
+09:55:06.076 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT * FROM Game WHERE ID  = 5
+09:55:06.076 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB closed
+09:55:06.085 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB games
+09:55:06.085 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT Max(ID) FROM Borrower
+09:55:06.085 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT * FROM Borrower WHERE ID  = 7
+09:55:06.086 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB closed
+09:55:06.095 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB games
+09:55:06.095 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT Max(ID) FROM Game
+09:55:06.095 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT * FROM Game WHERE ID  = 66
+09:55:06.096 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB closed
+09:55:06.104 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB games
+09:55:06.104 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT Max(ID) FROM Borrower
+09:55:06.105 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT * FROM Borrower WHERE ID  = 21
+09:55:06.105 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB closed
+09:55:06.113 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB games
+09:55:06.113 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT Max(ID) FROM Game
+09:55:06.114 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT * FROM Game WHERE ID  = 99
+09:55:06.114 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB closed
+09:55:06.123 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB games
+09:55:06.123 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT Max(ID) FROM Borrower
+09:55:06.123 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT * FROM Borrower WHERE ID  = 14
+09:55:06.123 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB closed
+09:55:06.132 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB games
+09:55:06.132 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT Max(ID) FROM Game
+09:55:06.132 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT * FROM Game WHERE ID  = 214
+09:55:06.132 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB closed
+09:55:06.141 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB games
+09:55:06.141 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT Max(ID) FROM Borrower
+09:55:06.142 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT * FROM Borrower WHERE ID  = 17
+09:55:06.142 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB closed
+09:55:06.150 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB games
+09:55:06.150 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT Max(ID) FROM Game
+09:55:06.151 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT * FROM Game WHERE ID  = 132
+09:55:06.151 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB closed
+09:55:06.159 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB games
+09:55:06.159 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT Max(ID) FROM Borrower
+09:55:06.160 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT * FROM Borrower WHERE ID  = 18
+09:55:06.160 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB closed
+09:55:06.168 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB games
+09:55:06.169 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT Max(ID) FROM Game
+09:55:06.169 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT * FROM Game WHERE ID  = 174
+09:55:06.169 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB closed
+09:55:06.177 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB games
+09:55:06.178 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT Max(ID) FROM Borrower
+09:55:06.178 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT * FROM Borrower WHERE ID  = 13
+09:55:06.178 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB closed
+09:55:06.185 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB games
+09:55:06.186 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT Max(ID) FROM Game
+09:55:06.186 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT * FROM Game WHERE ID  = 122
+09:55:06.186 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB closed
+09:55:06.195 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB games
+09:55:06.195 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT Max(ID) FROM Borrower
+09:55:06.195 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT * FROM Borrower WHERE ID  = 21
+09:55:06.195 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB closed
+09:55:06.204 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB games
+09:55:06.204 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT Max(ID) FROM Game
+09:55:06.204 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT * FROM Game WHERE ID  = 26
+09:55:06.204 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB closed
+09:55:06.212 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB games
+09:55:06.213 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT Max(ID) FROM Borrower
+09:55:06.213 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT * FROM Borrower WHERE ID  = 25
+09:55:06.213 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB closed
+09:55:06.221 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB games
+09:55:06.221 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT Max(ID) FROM Game
+09:55:06.222 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT * FROM Game WHERE ID  = 94
+09:55:06.222 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB closed
+09:55:06.230 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB games
+09:55:06.230 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT Max(ID) FROM Borrower
+09:55:06.231 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT * FROM Borrower WHERE ID  = 16
+09:55:06.231 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB closed
+09:55:06.239 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB games
+09:55:06.239 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT Max(ID) FROM Game
+09:55:06.240 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT * FROM Game WHERE ID  = 156
+09:55:06.240 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB closed
+09:55:06.248 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB games
+09:55:06.249 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT Max(ID) FROM Borrower
+09:55:06.249 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT * FROM Borrower WHERE ID  = 19
+09:55:06.249 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB closed
+09:55:06.257 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB games
+09:55:06.257 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT Max(ID) FROM Game
+09:55:06.258 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT * FROM Game WHERE ID  = 120
+09:55:06.258 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB closed
+09:55:06.266 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB games
+09:55:06.266 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT Max(ID) FROM Borrower
+09:55:06.266 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT * FROM Borrower WHERE ID  = 17
+09:55:06.267 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB closed
+09:55:06.274 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB games
+09:55:06.275 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT Max(ID) FROM Game
+09:55:06.275 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT * FROM Game WHERE ID  = 176
+09:55:06.275 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB closed
+09:55:06.283 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB games
+09:55:06.283 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT Max(ID) FROM Borrower
+09:55:06.283 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT * FROM Borrower WHERE ID  = 22
+09:55:06.284 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB closed
+09:55:06.292 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB games
+09:55:06.292 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT Max(ID) FROM Game
+09:55:06.293 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT * FROM Game WHERE ID  = 33
+09:55:06.293 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB closed
+09:55:06.305 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB games
+09:55:06.305 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT Max(ID) FROM Borrower
+09:55:06.306 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT * FROM Borrower WHERE ID  = 5
+09:55:06.306 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB closed
+09:55:06.314 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB games
+09:55:06.314 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT Max(ID) FROM Game
+09:55:06.315 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT * FROM Game WHERE ID  = 37
+09:55:06.315 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB closed
+09:55:06.323 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB games
+09:55:06.323 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT Max(ID) FROM Borrower
+09:55:06.323 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT * FROM Borrower WHERE ID  = 16
+09:55:06.323 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB closed
+09:55:06.331 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB games
+09:55:06.331 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT Max(ID) FROM Game
+09:55:06.332 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT * FROM Game WHERE ID  = 28
+09:55:06.332 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB closed
+09:55:06.340 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB games
+09:55:06.340 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT Max(ID) FROM Borrower
+09:55:06.341 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT * FROM Borrower WHERE ID  = 17
+09:55:06.341 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB closed
+09:55:06.349 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB games
+09:55:06.349 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT Max(ID) FROM Game
+09:55:06.350 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT * FROM Game WHERE ID  = 96
+09:55:06.350 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB closed
+09:55:06.358 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB games
+09:55:06.359 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT Max(ID) FROM Borrower
+09:55:06.359 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT * FROM Borrower WHERE ID  = 1
+09:55:06.359 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB closed
+09:55:06.367 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB games
+09:55:06.367 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT Max(ID) FROM Game
+09:55:06.367 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT * FROM Game WHERE ID  = 45
+09:55:06.368 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB closed
+09:55:06.376 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB games
+09:55:06.376 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT Max(ID) FROM Borrower
+09:55:06.376 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT * FROM Borrower WHERE ID  = 3
+09:55:06.376 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB closed
+09:55:06.384 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB games
+09:55:06.385 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT Max(ID) FROM Game
+09:55:06.385 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT * FROM Game WHERE ID  = 200
+09:55:06.385 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB closed
+09:55:06.393 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB games
+09:55:06.393 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT Max(ID) FROM Borrower
+09:55:06.394 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT * FROM Borrower WHERE ID  = 5
+09:55:06.394 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB closed
+09:55:06.402 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB games
+09:55:06.402 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT Max(ID) FROM Game
+09:55:06.402 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT * FROM Game WHERE ID  = 203
+09:55:06.403 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB closed
+09:55:06.411 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB games
+09:55:06.411 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT Max(ID) FROM Borrower
+09:55:06.411 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT * FROM Borrower WHERE ID  = 16
+09:55:06.412 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB closed
+09:55:06.419 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB games
+09:55:06.420 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT Max(ID) FROM Game
+09:55:06.420 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT * FROM Game WHERE ID  = 71
+09:55:06.420 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB closed
+09:55:06.429 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB games
+09:55:06.429 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT Max(ID) FROM Borrower
+09:55:06.429 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT * FROM Borrower WHERE ID  = 27
+09:55:06.429 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB closed
+09:55:06.437 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB games
+09:55:06.437 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT Max(ID) FROM Game
+09:55:06.438 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT * FROM Game WHERE ID  = 86
+09:55:06.438 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB closed
+09:55:06.446 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB games
+09:55:06.446 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT Max(ID) FROM Borrower
+09:55:06.446 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT * FROM Borrower WHERE ID  = 30
+09:55:06.447 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB closed
+09:55:06.455 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB games
+09:55:06.455 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT Max(ID) FROM Game
+09:55:06.456 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT * FROM Game WHERE ID  = 79
+09:55:06.456 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB closed
+09:55:06.465 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB games
+09:55:06.466 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT Max(ID) FROM Borrower
+09:55:06.466 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT * FROM Borrower WHERE ID  = 24
+09:55:06.466 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB closed
+09:55:06.474 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB games
+09:55:06.475 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT Max(ID) FROM Game
+09:55:06.475 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT * FROM Game WHERE ID  = 143
+09:55:06.475 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB closed
+09:55:06.484 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB games
+09:55:06.484 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT Max(ID) FROM Borrower
+09:55:06.484 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT * FROM Borrower WHERE ID  = 19
+09:55:06.484 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB closed
+09:55:06.493 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB games
+09:55:06.493 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT Max(ID) FROM Game
+09:55:06.494 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT * FROM Game WHERE ID  = 1
+09:55:06.494 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB closed
+09:55:06.502 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB games
+09:55:06.502 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT Max(ID) FROM Borrower
+09:55:06.503 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT * FROM Borrower WHERE ID  = 1
+09:55:06.503 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB closed
+09:55:06.511 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB games
+09:55:06.511 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT Max(ID) FROM Game
+09:55:06.511 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT * FROM Game WHERE ID  = 1
+09:55:06.511 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB closed
+09:55:06.519 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB games
+09:55:06.520 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT Max(ID) FROM Borrower
+09:55:06.520 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT * FROM Borrower WHERE ID  = 1
+09:55:06.520 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB closed
+09:55:06.528 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB games
+09:55:06.528 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT Max(ID) FROM Game
+09:55:06.529 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT * FROM Game WHERE ID  = 87
+09:55:06.529 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB closed
+09:55:06.537 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB games
+09:55:06.537 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT Max(ID) FROM Borrower
+09:55:06.537 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT * FROM Borrower WHERE ID  = 22
+09:55:06.538 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB closed
+09:55:06.545 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB games
+09:55:06.546 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT Max(ID) FROM Game
+09:55:06.546 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT * FROM Game WHERE ID  = 87
+09:55:06.546 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB closed
+09:55:06.555 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB games
+09:55:06.555 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT Max(ID) FROM Borrower
+09:55:06.555 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT * FROM Borrower WHERE ID  = 20
+09:55:06.555 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB closed
+09:55:06.563 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB games
+09:55:06.563 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT Max(ID) FROM Game
+09:55:06.564 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT * FROM Game WHERE ID  = 216
+09:55:06.564 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB closed
+09:55:06.572 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB games
+09:55:06.572 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT Max(ID) FROM Borrower
+09:55:06.572 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT * FROM Borrower WHERE ID  = 20
+09:55:06.572 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB closed
+09:55:06.580 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB games
+09:55:06.581 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT Max(ID) FROM Game
+09:55:06.581 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT * FROM Game WHERE ID  = 211
+09:55:06.581 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB closed
+09:55:06.589 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB games
+09:55:06.589 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT Max(ID) FROM Borrower
+09:55:06.590 [main] INFO  be.belfius.Daouri_Samy_Games.App - Query to DB : SELECT * FROM Borrower WHERE ID  = 30
+09:55:06.590 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB closed
+09:55:17.992 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB games
+09:55:18.045 [main] INFO  be.belfius.Daouri_Samy_Games.App - Connection to DB closed

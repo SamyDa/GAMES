@@ -218,7 +218,7 @@ public class App
 		int i= 0;
 		for(Borrow element : filteredList) {
 			
-			System.out.println("\t" + ++i + ".\t "+element.getGame().getName() + " (borrowed on "+ element.getBorrowDate() +")\t" + element.getReturnDate() );
+			System.out.println("\t" + ++i + ".\t "+element.getGame().getName() + " (borrowed on "+ element.getBorrowDate() );
 		}
 		choice = 0;
 		while(choice< 1 || choice > filteredList.size()) {
